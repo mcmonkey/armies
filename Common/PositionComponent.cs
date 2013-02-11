@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace Common
 {
@@ -12,9 +13,13 @@ namespace Common
             get { return 1; }
         }
 
-        public override void SetEntity(MatchEntity entity)
+        private Vector2 position = new Vector2();
+
+        public void GetPosition(ref Vector2 pos)
         {
-            throw new NotImplementedException();
+            pos.X = position.X;
+            pos.Y = position.Y;
         }
+        
     }
 }
