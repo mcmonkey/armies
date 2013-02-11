@@ -21,7 +21,7 @@ namespace Common
 
         public T getComponent<T>() where T: IEntityComponent, new()
         {
-            return (T)(components[EntityComponent<T>.CompId]);
+            return (T)(components[EntityComponent<T>.S_CompId]);
         }
         public MatchEntity()
         {

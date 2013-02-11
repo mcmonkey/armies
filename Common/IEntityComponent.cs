@@ -7,7 +7,7 @@ namespace Common
 {
     public interface IEntityComponent
     {
-        int CompId { get; }
+        byte CompId { get; }
         void SetEntity(MatchEntity entity);
     }
 }

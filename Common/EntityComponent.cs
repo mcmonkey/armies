@@ -5,10 +5,14 @@ using System.Text;
 
 namespace Common
 {
-    public abstract class EntityComponent<T> where T : IEntityComponent, new()
+    public abstract class EntityComponent<T> : IEntityComponent where T : IEntityComponent, new()
     {
         private static IEntityComponent template = new T();
 
-        public static int CompId { get { return template.CompId } }
+        public static byte S_CompId { get { return template.CompId;  } }
+
+        public abstract byte CompId { get; }
+
+        public abstract void SetEntity(MatchEntity entity);
     }
 }
